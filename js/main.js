@@ -1,9 +1,9 @@
 
 document.getElementById('button').addEventListener('click', () => {
-    let opA = parseInt(document.getElementById('operandoA').value);
-    let opB = parseInt(document.getElementById('operandoB').value);
+    let opA = (document.getElementById('operandoA').value);
+    let opB = (document.getElementById('operandoB').value);
     
-    let result = `Resultado: ${opA + opB}`;
+    let result = parseInt(opA) + parseInt(opB);
 
-    document.getElementById('showResult').innerHTML = result;
+    document.getElementById('showResult').innerHTML = `Resultado: ${result}`;
 });
