@@ -13,9 +13,12 @@ document.getElementById('button').addEventListener('click', () => {
         show.style.color = 'red';
         show.style.fontWeight = 'bold';
         result = '¡La operación no incluye números!'
+    } 
+    // Si es un número.
+    else if (result){
+        show.style.color = 'black';
+        show.style.fontWeight = 'normal';
+        show.innerHTML = `Resultado de la suma: ${result}`;
     }
 
-    // Si es un número.
-    show.style.color = 'black';
-    show.innerHTML = `Resultado: ${result}`;
 });
