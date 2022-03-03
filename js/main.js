@@ -1,9 +1,21 @@
-
+// Función para calcular.
 document.getElementById('button').addEventListener('click', () => {
-    let opA = (document.getElementById('operandoA').value);
-    let opB = (document.getElementById('operandoB').value);
+    // Variables
+    let opA = (document.getElementById('operandoA').value); // Valor A.
+    let opB = (document.getElementById('operandoB').value); // Valor B.
+    let show = document.getElementById('showResult'); // Div de resultado.
     
+    // Cálculo
     let result = parseInt(opA) + parseInt(opB);
 
-    document.getElementById('showResult').innerHTML = `Resultado: ${result}`;
+    // Si no es un número.
+    if (isNaN(result)){
+        show.style.color = 'red';
+        show.style.fontWeight = 'bold';
+        result = '¡La operación no incluye números!'
+    }
+
+    // Si es un número.
+    show.style.color = 'black';
+    show.innerHTML = `Resultado: ${result}`;
 });
